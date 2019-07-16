@@ -1,0 +1,14 @@
+@model Signin
+
+<div>
+    <span asp-validation-for="SigninEmail"></span>
+    <span asp-validation-for="SigninPassword"></span>
+</div>
+<a asp-action="Index" asp-controller="Home">Register</a>
+<form asp-action="Signin" asp-asp-controller="Home" method="post">
+    <label asp-for="SigninEmail"></label><br>
+    <input asp-for="SigninEmail">
+    <label asp-for="SigninPassword"></label><br>
+    <input asp-for="SigninPassword">
+    <input type="submit" value="Login">
+</form>

@@ -1,0 +1,34 @@
+@model Transaction
+
+<h1>Welcome @ViewBag.User.FirstName!</h1>
+
+<a asp-action="LogOut" asp-controller="Home">Logout</a>
+<h4>Your current balance is: @ViewBag.Balance</h4>
+
+<div>
+    <span asp-validation-for="Amount"></span>
+</div>
+<form asp-action="Money" asp-controller="Bank" method="post">
+        <label asp-for="Amount"></label>
+        <input type ="number" asp-for="Amount">
+        <input type="hidden" asp-for="UserId" value="@ViewBag.User.UserId">
+        <input type="submit" value="submit">
+</form>
+<hr>
+<table class = " table table-hover">
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var t in ViewBag.User.Transactions)
+        {
+            <tr>
+                <td>@t.Amount</td>
+                <td>@t.CreatedAt</td>
+            </tr>
+        }
+    </tbody>
+</table>

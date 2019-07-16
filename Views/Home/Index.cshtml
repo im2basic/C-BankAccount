@@ -1,0 +1,22 @@
+﻿@model User
+
+<div>
+    <span asp-asp-validation-for="FirstName"></span>
+    <span asp-asp-validation-for="LastName"></span>
+    <span asp-asp-validation-for="Email"></span>
+    <span asp-asp-validation-for="Password"></span>
+    <span asp-asp-validation-for="ComparePassword"></span>
+</div>
+<form asp-action="Register" asp-controller="Home" method="post">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName"><br>
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName"><br>
+    <label asp-for="Email"></label>
+    <input asp-for="Email"><br>
+    <label asp-for="Password"></label>
+    <input asp-for="Password"><br>
+    <label asp-for="ComparePassword"></label>
+    <input asp-for="ComparePassword"><br>
+    <input type="submit" value="Register">
+</form>
