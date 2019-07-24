@@ -2857,5 +2857,6 @@
     "CSharpLanguageVersion": 703
   },
   "RootNamespace": "BankAccount",
-  "Documents": []
+  "Documents": [],
+  "SerializationFormat": "0.1"
 }
